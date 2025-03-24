@@ -84,3 +84,6 @@ apidoc/
 Dockerfile
 docker-compose.yml
 .dockerignore
+
+# Firebase
+serviceAccountKey.json
