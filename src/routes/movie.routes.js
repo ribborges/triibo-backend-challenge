@@ -15,7 +15,8 @@ export default (router) => {
      *      "id": "acd123",
      *      "title": "The Hunger Games",
      *      "description": "Katniss Everdeen voluntarily takes her younger sister's place in the Hunger Games: a televised competition in which two teenagers from each of the twelve Districts of Panem are chosen at random to fight to the death.",
-     *      "year": "2012"
+     *      "year": "2012",
+     *      "info": { *OMDB data excluding Title, Year, and Plot fields* }
      * }
      * 
      * @apiError (Error 4xx) BadRequest The <code>id</code> was not provided
