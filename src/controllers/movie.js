@@ -20,7 +20,7 @@ async function getMovie(req, res) {
         const { Title, Year, Plot, ...omdbData } = omdbRes.data;
 
         // Return movie data and OMDB data (without the Title, Year, and Plot)
-        res.status(200).json({ id, ...result.data(), omdbData });
+        res.status(200).json({ id, ...result.data(), info: omdbData });
     } catch (error) {
         res.status(500).send('Internal server error');
     }
