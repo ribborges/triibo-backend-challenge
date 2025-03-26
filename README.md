@@ -70,6 +70,9 @@ NODE_ENV=<Ambiente da aplicação. Use 'development' para uso local>
 > **UPDATE**    Atualizar filme
 > **DELETE**    Excluir filme
 
+> */api/movies/all*
+> **GET**       Lista todos os filmes cadastrados
+
 > */api/auth/login*
 **POST**        Fazer login
 
