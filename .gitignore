@@ -80,7 +80,6 @@ ehthumbs.db
 apidoc/
 
 # Docker
-Dockerfile
 docker-compose.yml
 .dockerignore
 
