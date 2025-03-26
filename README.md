@@ -64,15 +64,22 @@ NODE_ENV=<Ambiente da aplicação. Use 'development' para uso local>
 
 ### API
 
-**GET**     > */api/movies*         Consulta filme por ID
-**POST**    > */api/movies*         Cadastar filme
-**UPDATE**  > */api/movies*         Atualizar filme
-**DELETE**  > */api/movies*         Excluir filme
+> */api/movies*
+> **GET**       Consulta filme por ID
+> **POST**      Cadastar filme
+> **UPDATE**    Atualizar filme
+> **DELETE**    Excluir filme
 
-**POST**    > */api/auth/login*     Fazer login
-**POST**    > */api/auth/register*  Registrar novo usuário
-**POST**    > */api/auth/logout*    Fazer logout
+> */api/auth/login*
+**POST**        Fazer login
+
+> */api/auth/register*
+**POST**        Registrar novo usuário
+
+> */api/auth/logout*
+**POST**        Fazer logout
 
 ### Documentação
 
-**GET**     > */apidoc*             Acessa página de documentação (Rodar script *docs* para gerar a documentação)
+> */apidoc*
+**GET**         Acessa página de documentação (Rodar script *docs* para gerar a documentação)
