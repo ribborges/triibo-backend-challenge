@@ -1,4 +1,5 @@
 import { getMovie, postMovie, putMovie, deleteMovie } from '#root/controllers/movie.js';
+import { isAuth } from '#root/middleware/auth.js';
 
 export default (router) => {
     /**
@@ -42,7 +43,7 @@ export default (router) => {
      *      "status": "Internal server error"
      * }
      */
-    router.get("/movies", getMovie);
+    router.get("/movies", isAuth, getMovie);
 
     /**
      * @api {post} /movies Create a movie
@@ -77,7 +78,7 @@ export default (router) => {
      *      "status": "Internal server error"
      * }
      */
-    router.post("/movies", postMovie);
+    router.post("/movies", isAuth, postMovie);
 
     /**
      * @api {put} /movies/:id Update a movie by ID
@@ -113,7 +114,7 @@ export default (router) => {
      *      "status": "Internal server error"
      * }
      */
-    router.put("/movies", putMovie);
+    router.put("/movies", isAuth, putMovie);
 
     /**
      * @api {delete} /movies/:id Delete a movie by ID
@@ -145,5 +146,5 @@ export default (router) => {
      *      "status": "Internal server error"
      * }
      */
-    router.delete("/movies", deleteMovie);
+    router.delete("/movies", isAuth, deleteMovie);
 }
