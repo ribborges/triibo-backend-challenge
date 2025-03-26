@@ -3,7 +3,7 @@ import { isAuth } from '#root/middleware/auth.js';
 
 export default (router) => {
     /**
-     * @api {get} /movies Get a movie by ID
+     * @api {get} /api/movies Get a movie by ID
      * @apiGroup Movies
      * 
      * @apiParam (Query) {String} id Movie ID
@@ -46,7 +46,7 @@ export default (router) => {
     router.get("/movies", isAuth, getMovie);
 
     /**
-     * @api {post} /movies Create a movie
+     * @api {post} /api/movies Create a movie
      * @apiGroup Movies
      * 
      * @apiBody {String} title Movie title 
@@ -81,7 +81,7 @@ export default (router) => {
     router.post("/movies", isAuth, postMovie);
 
     /**
-     * @api {put} /movies/:id Update a movie by ID
+     * @api {put} /api/movies Update a movie by ID
      * @apiGroup Movies
      * 
      * @apiParam (Query) {String} id Movie ID
@@ -117,7 +117,7 @@ export default (router) => {
     router.put("/movies", isAuth, putMovie);
 
     /**
-     * @api {delete} /movies/:id Delete a movie by ID
+     * @api {delete} /api/movies Delete a movie by ID
      * @apiGroup Movies
      * 
      * @apiParam (Query) {String} id Movie ID
