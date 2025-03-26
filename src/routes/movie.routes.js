@@ -5,6 +5,8 @@ export default (router) => {
     /**
      * @api {get} /api/movies Get a movie by ID
      * @apiGroup Movies
+     * @apiDescription Retrieves a movie by ID with additional information from the OMDB API
+     * @apiVersion 1.0.0
      * 
      * @apiParam (Query) {String} id Movie ID
      * 
@@ -48,6 +50,8 @@ export default (router) => {
     /**
      * @api {post} /api/movies Create a movie
      * @apiGroup Movies
+     * @apiDescription Adds a new movie to the database
+     * @apiVersion 1.0.0
      * 
      * @apiBody {String} title Movie title 
      * @apiBody {String} description Movie description
@@ -83,6 +87,8 @@ export default (router) => {
     /**
      * @api {put} /api/movies Update a movie by ID
      * @apiGroup Movies
+     * @apiDescription Updates a movie by ID
+     * @apiVersion 1.0.0
      * 
      * @apiParam (Query) {String} id Movie ID
      * 
@@ -121,6 +127,8 @@ export default (router) => {
     /**
      * @api {delete} /api/movies Delete a movie by ID
      * @apiGroup Movies
+     * @apiDescription Deletes a movie by ID
+     * @apiVersion 1.0.0
      * 
      * @apiParam (Query) {String} id Movie ID
      * 
