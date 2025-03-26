@@ -56,7 +56,6 @@ typings/
 
 # Jest
 jest/
-jest.config.js
 jest.setup.js
 
 # VS Code
