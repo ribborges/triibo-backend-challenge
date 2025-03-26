@@ -1,4 +1,5 @@
 import { login, register, logout } from "#root/controllers/auth.js";
+import { isAuth } from "#root/middleware/auth";
 
 export default (router) => {
     /**
@@ -127,5 +128,5 @@ export default (router) => {
      *      "status": "Internal server error"
      * }
      */
-    router.post("/auth/logout", logout);
+    router.post("/auth/logout", isAuth, logout);
 }
