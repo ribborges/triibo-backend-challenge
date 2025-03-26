@@ -84,7 +84,7 @@ async function putMovie(req, res) {
 
 async function deleteMovie(req, res) {
     try {
-        const { id } = req.params;
+        const { id } = req.query;
 
         if (!id) return res.status(400).json({ status: 'Bad request' });
 
