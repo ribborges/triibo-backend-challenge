@@ -1,5 +1,5 @@
 import { login, register, logout } from "#root/controllers/auth.js";
-import { isAuth } from "#root/middleware/auth";
+import { isAuth } from "#root/middleware/auth.js";
 
 export default (router) => {
     /**
