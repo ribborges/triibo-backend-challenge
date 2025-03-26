@@ -65,6 +65,16 @@ describe('Movies API', () => {
         }, 30000);
     });
 
+    describe('GET /api/movies/all', () => {
+        it('should retrieve all movies', async () => {
+            const res = await session
+                .get('/api/movies/all');
+
+            expect(res.statusCode).toBe(200);
+            expect(res.body).toBeInstanceOf(Array);
+        }, 30000);
+    });
+
     describe('PUT /api/movies', () => {
         it('should update a movie', async () => {
             const res = await session
