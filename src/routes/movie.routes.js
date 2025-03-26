@@ -95,7 +95,9 @@ export default (router) => {
      * @apiSuccessExample {json} Success
      * HTTP/1.1 200 OK
      * {
-     *      "status": "Movie updated successfully"
+     *      "status": "Movie updated successfully",
+     *      "id": "abc123",
+     *      "updated": { *Updated fields* },
      * }
      * 
      * @apiError (Error 4xx) BadRequest The <code>id</code>, <code>title</code>, <code>description</code>, or <code>year</code> was not provided
