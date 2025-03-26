@@ -15,4 +15,8 @@ const genToken = (id) => {
     });
 };
 
-export { random, hashPassword, genToken };
+const verifyToken = (token) => {
+    return jwt.verify(token, secret);
+}
+
+export { random, hashPassword, genToken, verifyToken };
