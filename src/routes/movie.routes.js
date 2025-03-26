@@ -47,6 +47,42 @@ export default (router) => {
      */
     router.get("/movies", isAuth, getMovie);
 
+    /**
+     * @api {get} /api/movies/all Get all movies
+     * @apiGroup Movies
+     * @apiDescription Retrieves all movies with additional information from the OMDB API
+     * @apiVersion 1.0.0
+     * 
+     * @apiSuccess (Success 2xx) {String} status Status of the request
+     * 
+     * @apiSuccessExample {json} Success
+     * HTTP/1.1 200 OK
+     * [
+     *      {
+     *          "id": "acd123",
+     *          "title": "The Hunger Games",
+     *          "description": "Katniss Everdeen voluntarily takes her younger sister's place in the Hunger Games: a televised competition in which two teenagers from each of the twelve Districts of Panem are chosen at random to fight to the death.",
+     *          "year": "2012",
+     *          "info": { *OMDB data excluding Title, Year, and Plot fields* }
+     *      }
+     * ]
+     * 
+     * @apiError (Error 4xx) MoviesNotFound No movies were found
+     * 
+     * @apiErrorExample {json} Error: Movies Not Found
+     * HTTP/1.1 404 Not Found
+     * {
+     *      "status": "No movies found"
+     * }
+     * 
+     * @apiError (Error 5xx) InternalServerError An error occurred while processing the request
+     * 
+     * @apiErrorExample {json} Error: Internal Server Error
+     * HTTP/1.1 500 Internal Server Error
+     * {
+     *      "status": "Internal server error"
+     * }
+     */
     router.get("/movies/all", isAuth, getAllMovies);
 
     /**
