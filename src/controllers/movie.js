@@ -26,6 +26,27 @@ async function getMovie(req, res) {
     }
 }
 
+async function getAllMovies(req, res) {
+    try {
+        const snapshot = db.collection(collectionName);
+        const result = await snapshot.get();
+
+        if (!result) return res.status(404).json({ status: 'No movies found' });
+
+        const movies = await Promise.all(
+            result.docs.map(async (doc) => {
+                const omdbRes = await api.get('/', { params: { t: doc.data().title } });
+                return { id: doc.id, ...doc.data(), info: omdbRes.data };
+            })
+        );
+
+        // Return all movies
+        res.status(200).json(movies);
+    } catch (error) {
+        res.status(500).send('Internal server error');
+    }
+}
+
 async function postMovie(req, res) {
     try {
         const { title, description, year } = req.body;
@@ -100,4 +121,4 @@ async function deleteMovie(req, res) {
     }
 }
 
-export { getMovie, postMovie, putMovie, deleteMovie };
+export { getMovie, getAllMovies, postMovie, putMovie, deleteMovie };

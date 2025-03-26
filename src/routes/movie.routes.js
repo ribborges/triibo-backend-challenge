@@ -1,4 +1,4 @@
-import { getMovie, postMovie, putMovie, deleteMovie } from '#root/controllers/movie.js';
+import { getMovie, getAllMovies, postMovie, putMovie, deleteMovie } from '#root/controllers/movie.js';
 import { isAuth } from '#root/middleware/auth.js';
 
 export default (router) => {
@@ -46,6 +46,8 @@ export default (router) => {
      * }
      */
     router.get("/movies", isAuth, getMovie);
+
+    router.get("/movies/all", isAuth, getAllMovies);
 
     /**
      * @api {post} /api/movies Create a movie
