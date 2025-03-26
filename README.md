@@ -16,7 +16,7 @@ Desafio da Triibo para vaga de Dev Back-End Node.js
 
 3. Crie um arquivo .env na raiz do projeto
 
-4. ### Adicione as seguintes variaveis
+4. Adicione as seguintes variaveis:
 
 ```
 PORT=<Porta do server>
