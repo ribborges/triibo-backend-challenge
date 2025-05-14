@@ -2,7 +2,7 @@
   "name": "triibo-backend-challenge",
   "version": "1.0.0",
   "description": "Practical test - Backend developer with Node.js: Movie CRUD API",
-  "license": "ISC",
+  "license": "MPL-2.0",
   "author": {
     "name": "Richard Borges",
     "email": "contato@richardborges.dev",
